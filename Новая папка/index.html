@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн‑полотно</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="canvas-app">
+        <div class="toolbar">
+            <label>Кисть: 
+                <input type="range" id="brushSize" min="1" max="50" value="5">
+            </label>
+            <button id="clearBtn">Очистить</button>
+            <button id="toolToggle">Ластик</button>
+            <input type="color" id="colorPicker" value="#000000">
+            <div id="colorPalette"></div>
+        </div>
+        <canvas id="drawingCanvas" width="800" height="600"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<div class="toolbar">
+  <div class="toolbar">
+    <!-- ...предыдущие элементы... -->
+    <select id="colorCategory">
+        <option value="basic">Основные</option>
+        <option value="reds">Красные</option>
+        <option value="greens">Зелёные</option>
+        <option value="blues">Синие</option>
+        <option value="grays">Серые</option>
+        <option value="pastels">Пастельные</option>
+    </select>
+    <div id="dynamicPalette" class="palette-grid"></div>
+</div>
+
